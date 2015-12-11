@@ -19,6 +19,9 @@ echo "Extracting $ZIP_FILE contents..."
 unzip -qo $ZIP_FILE
 
 # Move contents to correct location in package
-mkdir -p $BUILDDIR/usr/local/bin
-cp ./consul $BUILDDIR/usr/local/bin
-cp -r $REPO_DIR/etc $BUILDDIR
+# Hack sideloader to not build things in /var/praekelt - install files straight into the package directory
+PACKAGE_DIR=$WORKSPACE/package
+mkdir -p $PACKAGE_DIR
+mkdir -p $PACKAGE_DIR/usr/local/bin
+cp ./consul $PACKAGE_DIR/usr/local/bin
+cp -r $REPO_DIR/etc $PACKAGE_DIR
