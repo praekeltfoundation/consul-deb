@@ -5,7 +5,7 @@ ZIP_FILE="consul_${VERSION}_linux_amd64.zip"
 
 if ! [ -f $ZIP_FILE ]; then
     echo "Downloading file $ZIP_FILE..."
-    curl -sL "https://releases.hashicorp.com/consul/$VERSION/$ZIP_FILE"
+    curl -sL -o $ZIP_FILE "https://releases.hashicorp.com/consul/$VERSION/$ZIP_FILE"
 else
     echo "File $ZIP_FILE found, not downloading."
 fi
