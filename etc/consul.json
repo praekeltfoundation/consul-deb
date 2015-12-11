@@ -1,0 +1,5 @@
+{
+    "server": true,
+	"bootstrap": true,
+	"advertise_addr": "127.0.0.1"
+}
