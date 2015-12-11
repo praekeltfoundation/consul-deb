@@ -19,7 +19,6 @@ echo "Extracting $ZIP_FILE contents..."
 unzip -qo $ZIP_FILE
 
 # Move contents to correct location in package
-BUILD_DIR="$(pwd)/$BUILDDIR"
-mkdir -p $BUILD_DIR/usr/local/bin
-cp ./consul $BUILD_DIR/usr/local/bin
-cp -r $REPO_DIR/etc $BUILD_DIR
+mkdir -p $BUILDDIR/usr/local/bin
+cp ./consul $BUILDDIR/usr/local/bin
+cp -r $REPO_DIR/etc $BUILDDIR
