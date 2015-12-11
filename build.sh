@@ -25,3 +25,8 @@ mkdir -p $PACKAGE_DIR
 mkdir -p $PACKAGE_DIR/usr/local/bin
 cp ./consul $PACKAGE_DIR/usr/local/bin
 cp -r $REPO_DIR/etc $PACKAGE_DIR
+
+# Create misc empty directories
+for path in /var/run/consul /var/lib/consul /etc/consul.d; do
+    mkdir -p $PACKAGE_DIR$path
+done

@@ -11,3 +11,9 @@ if ! getent passwd consul >/dev/null; then
             --system --shell /bin/false \
             --gecos "Consul user" consul
 fi
+
+# Set permissions for directories
+for path in /var/run/consul /var/lib/consul /etc/consul.d; do
+    chown -R consul:consul $path
+    chmod 755 $path
+done
