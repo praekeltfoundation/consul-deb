@@ -22,4 +22,4 @@ unzip -qo $ZIP_FILE
 PACKAGE_DIR="$(pwd)/$INSTALLDIR"
 mkdir -p $PACKAGE_DIR/usr/local/bin
 cp ./consul $PACKAGE_DIR/usr/local/bin
-cp -r ./etc $PACKAGE_DIR
+cp -r $REPO_DIR/etc $PACKAGE_DIR
