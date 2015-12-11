@@ -1,4 +1,3 @@
 name: consul
 version: 0.6.0
-user: consul
 buildscript: build.sh
