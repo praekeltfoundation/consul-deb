@@ -2,6 +2,7 @@
 
 VERSION="0.6.0"
 ZIP_FILE="consul_${VERSION}_linux_amd64.zip"
+BIN_DIR=/usr/bin
 
 if ! [ -f $ZIP_FILE ]; then
     echo "Downloading file $ZIP_FILE..."
@@ -22,8 +23,8 @@ unzip -qo $ZIP_FILE
 # Hack sideloader to not build things in /var/praekelt - install files straight into the package directory
 PACKAGE_DIR=$WORKSPACE/package
 mkdir -p $PACKAGE_DIR
-mkdir -p $PACKAGE_DIR/usr/local/bin
-cp ./consul $PACKAGE_DIR/usr/local/bin
+mkdir -p $PACKAGE_DIR$BIN_DIR
+cp ./consul $PACKAGE_DIR$BIN_DIR
 cp -r $REPO_DIR/etc $PACKAGE_DIR
 
 # Create misc empty directories
