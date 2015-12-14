@@ -3,7 +3,7 @@ Files for packaging [Consul](https://consul.io) as a .deb file for (at the momen
 
 Builds a .deb package using Praekelt's packaging and deployment tool, [Sideloader](https://github.com/praekelt/sideloader/).
 
-**NOTE:** Currently only Ubuntu 14.04 (a.k.a. Trusty) on amd64 platforms is supported. Other versions of Ubuntu on amd64 that use Upstart (e.g. Precise) should work too but are untested.
+**NOTE:** Currently only Ubuntu 14.04 (a.k.a. Trusty) on amd64 platforms is supported. Other versions of Ubuntu on amd64 that use Upstart 1.4+ (i.e. 12.04 - 14.10) should work too but are untested.
 
 This includes only the basics:
 * The Consul binary (no web UI)

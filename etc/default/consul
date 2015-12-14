@@ -1,0 +1,11 @@
+# Consul Upstart configuration file
+
+# Customize location of Consul binary (especially for development testing).
+#CONSUL="/usr/local/bin/consul"
+
+# Use CONSUL_OPTS to modify the agent startup options.
+CONSUL_OPTS=" \
+    -pid-file=/var/run/consul/agent.pid \
+    -data-dir=/var/lib/consul \
+    -config-file=/etc/consul.json \
+    -config-dir=/etc/consul.d"
