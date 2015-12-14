@@ -5,7 +5,9 @@ Builds a .deb package using Praekelt's packaging and deployment tool, [Sideloade
 
 **NOTE:** Currently only Ubuntu 14.04 (a.k.a. Trusty) on amd64 platforms is supported. Other versions of Ubuntu on amd64 that use Upstart 1.4+ (i.e. 12.04 - 14.10) should work too but are untested.
 
-This includes only the basics:
+Consul binary signatures are verified using Hashicorp's PGP public key. The key is available [here](https://hashicorp.com/security.html) and needs to be added to the build user's default keyring for builds to complete.
+
+The built package will include:
 * The Consul binary (no web UI)
 * An Upstart init script
 * The most basic config file to get things up and running
