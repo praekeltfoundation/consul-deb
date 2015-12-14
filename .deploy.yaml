@@ -1,0 +1,4 @@
+name: consul
+version: 0.6.0
+buildscript: build.sh
+postinstall: postinstall.sh
