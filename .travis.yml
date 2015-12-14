@@ -1,0 +1,15 @@
+language: ruby
+install: gem install fpm
+before_script:
+  - gpg --keyserver pgp.mit.edu --recv-key 348FFC4C
+script:
+  - "./standalone.sh"
+deploy:
+  provider: releases
+  api_key:
+    secure: UAwRXckjjxsCobP6LUsFzm83DA3AZWCupnUtkVSScRHoylutLh19pjA3o9kNY55gMjBu1Z2o4qNhLjlLZVNIhEoWGlWeSqwCFXdCwzthlh4RF9W5wjBw0ynvuFFgNgo+vqb8s+N0XqI4n7XT2yf8cKTgPvdHnZjgPrAWhFdMyO3ZxY2eiTgxA997bRsKkIQHt2cki2plqIlaemWE+dLZYR5AgYMjj+cm4k3LZWhSI/91Vznd5I+0PRBaQ9KUhl5NnNZd2i3PxKX+3EXO1BwC0E1WL45UaMYOJK/E77NB5jTVxCpye4M1SxhWsHGtxNaPaF7Dn1RdJ3lWxp3cByvtfKNUNkO5CouUU0ZxDDmbnUH6AdA06mrHta8UinXotEK5+UGCmqV5BaiXBoBSUl5Kr3GHh79KwyCeYaBOUnNMbUYshT6gQ2QeD5yEsoydX8J7FxqPH9eYMlR8abZUBk7rA7eS19z0a7b58px3sXqU7BbPGPv0ZUqeV1iayM7OXWZ4tRcRNBWdlyZ+yLB++pC8PzygukQKD6+KE9JiVzqu6wn056SqipsLXu4ztSMCEyZGvDKaUsUkwblJkov/uz3DBs1Mp8nXtYTCjQbGjpUF1m1ZByc0vplfbcj/L1L2zqVr8uyHhyncSFdML+0IaGt4IMttQvpyrGi4PV3CxDcSU+o=
+  file: workspace/package/consul_0.6.0_amd64.deb
+  on:
+    repo: praekeltfoundation/consul-deb
+    branch: develop
+    tags: true
