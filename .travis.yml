@@ -1,0 +1,8 @@
+language: ruby
+install: gem install fpm
+
+before_script:
+    - gpg --keyserver pgp.mit.edu --recv-key 348FFC4C
+
+script:
+    - ./standalone.sh
